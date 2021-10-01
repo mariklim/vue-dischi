@@ -2,7 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 // variabiles
 @import './variables.scss';
-
+//reset
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
 	font-family: $mainFont;
+    background-color: $bgBody;
+    color: aquamarine;
+}
+header{
+    background-color: $bgHeader;
 }

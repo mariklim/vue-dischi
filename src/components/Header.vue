@@ -1,7 +1,8 @@
 <template>
-<section>
-<h1>Header</h1>
-</section>
+<header>
+  <h1>Header</h1>  
+</header>
+
 </template>
 
 <script>
@@ -13,6 +14,6 @@ export default {
 
 <style lang="scss">
 h1{
-    color: brown;
+    color: rgb(255, 245, 245);
 }
 </style>
