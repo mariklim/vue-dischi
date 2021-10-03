@@ -26,8 +26,6 @@ export default {
 			.get("https://flynn.boolean.careers/exercises/api/array/music")
 			.then( (res) => {
 				this.allAlbums = res.data.response;
-       
-
 			});
 	}
   
@@ -40,7 +38,8 @@ export default {
   @include containerCentered;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 4.375rem
+  margin-top:3.125rem;
+  margin-bottom:3.125rem;
 }
 .card{
   @import '../assets/style/variables';
