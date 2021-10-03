@@ -45,11 +45,8 @@ export default {
 .card{
   @import '../assets/style/variables';
   background-color: $bgHeader;
-  border: 1px solid white;
   width: calc((100% / 5) - 1.875rem);
-  height: 200px;
   margin: .9375rem;
   text-align: center;
 }
-
 </style>
