@@ -4,3 +4,9 @@ $mainFont: 'Roboto', sans-serif;
 //BG
 $bgBody: #1E2D3B;
 $bgHeader: #2E3A46;
+
+//Containers
+@mixin containerCentered{
+    max-width: 62.5rem;
+    margin: auto;
+}

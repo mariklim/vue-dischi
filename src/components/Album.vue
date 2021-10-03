@@ -1,8 +1,9 @@
-<template>
- <div>
+<template>  
+   <div>
     <h3>{{info.title}}</h3>
-    <img :src="info.image" :alt="info.poster">
+    <!-- <img :src="info.image" :alt="info.poster"> -->
  </div>
+
 </template>
 
 <script>
@@ -15,7 +16,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 h3{
 color: crimson;
 }
