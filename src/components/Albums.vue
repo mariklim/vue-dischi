@@ -1,51 +1,49 @@
 <template>
-    <div class="container">
-      <!-- <Album/> -->
-      <div class="card" v-for="(elm, index) in allAlbums" :key="index">
-        <Album :info="elm"/>
-      </div>
+  <div class="container">
+    <!-- <Album/> -->
+    <div class="card" v-for="(elm, index) in allAlbums" :key="index">
+      <Album :info="elm" />
     </div>
-
+  </div>
 </template>
 
 <script>
-import axios from 'axios'
-import Album from './Album.vue';
+import axios from "axios";
+import Album from "./Album.vue";
 export default {
-    name:"Albums",
-    components: {
-    Album
+  name: "Albums",
+  components: {
+    Album,
   },
   data() {
-		return {
-			allAlbums: []
-		}
-	},
+    return {
+      allAlbums: [],
+    };
+  },
   created() {
-		axios
-			.get("https://flynn.boolean.careers/exercises/api/array/music")
-			.then( (res) => {
-				this.allAlbums = res.data.response;
-			});
-	}
-  
-}
+    axios
+      .get("https://flynn.boolean.careers/exercises/api/array/music")
+      .then((res) => {
+        this.allAlbums = res.data.response;
+      });
+  },
+};
 </script>
 
 <style lang="scss">
-.container{
-  @import '../assets/style/variables';
+.container {
+  @import "../assets/style/variables";
   @include containerCentered;
   display: flex;
   flex-wrap: wrap;
-  margin-top:3.125rem;
-  margin-bottom:3.125rem;
+  margin-top: 3.125rem;
+  margin-bottom: 3.125rem;
 }
-.card{
-  @import '../assets/style/variables';
+.card {
+  @import "../assets/style/variables";
   background-color: $bgHeader;
   width: calc((100% / 5) - 1.875rem);
-  margin: .9375rem;
+  margin: 0.9375rem;
   text-align: center;
 }
 </style>
