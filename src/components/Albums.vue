@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <!-- <Album/> -->
-    <div class="card" v-for="(elm, index) in allAlbums" :key="index">
+    <div class="card" v-for="(elm, index) in filteredList" :key="index">
       <Album :info="elm" />
     </div>
   </div>
@@ -12,6 +12,9 @@ import axios from "axios";
 import Album from "./Album.vue";
 export default {
   name: "Albums",
+  props: {
+    infoGenre: String,
+  },
   components: {
     Album,
   },
@@ -26,6 +29,13 @@ export default {
       .then((res) => {
         this.allAlbums = res.data.response;
       });
+  },
+  computed: {
+    filteredList() {
+      return this.allAlbums.filter((value) => {
+        return value.genre.toLowerCase().includes(this.infoGenre.toLowerCase());
+      });
+    },
   },
 };
 </script>

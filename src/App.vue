@@ -1,13 +1,11 @@
 <template>
   <div id="app">
     <body>
-    <header>
-    <Header/>
-    <Select
-    @select="searchAlbum"
-    />
-    </header>
-    <Albums/>
+    <Header
+    @select = "selectGenre"/>
+    <Albums
+    :infoGenre = "selected"/>
+    <!-- props mettiamo nel tag in cui voglio passare dei dati MA non nel tag da cui arrivano!!! -->
     </body>
   </div>
 </template>
@@ -15,22 +13,19 @@
 <script>
 import Header from './components/Header.vue';
 import Albums from './components/Albums.vue';
-import Select from './components/Select.vue';
 export default {
   name: 'App',
   components: {
     Header,
     Albums,
-    Select
   },
   data() {
 		return {
 			selected: "",
-      test:"",
 		}
 	},
   methods: {
-		searchAlbum(text) {
+		selectGenre(text) {
 			this.selected = text;
       console.log(this.selected)
 		}
