@@ -18,7 +18,7 @@ export default {
   data() {
       return {
         selected: "",
-        genrArr:['Rock','Pop','Jazz', 'prova'],
+        genrArr:['Rock','Pop','Jazz'],
       }
     }
 };
