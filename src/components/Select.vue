@@ -1,7 +1,7 @@
 C<template>
  <select v-model="selected"  @change="$emit('select', selected)">
   <option disabled value="">Filtra per genere</option>
-  <option v-for ="(elm, index) in genrArr" :key="index" value="genre"> {{elm}}</option>
+  <option v-for ="(elm, index) in genrArr" :key="index" :value="(elm)"> {{elm}}</option>
  
 </select>
 </template>

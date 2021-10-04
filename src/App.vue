@@ -32,6 +32,7 @@ export default {
   methods: {
 		searchAlbum(text) {
 			this.selected = text;
+      console.log(this.selected)
 		}
 	},
   }
