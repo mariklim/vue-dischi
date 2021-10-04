@@ -3,16 +3,14 @@
     <div class="logo">
       <img src="../assets/images/spotify-logo.png" alt="spotify logo" />
     </div>
-     <Select/>
   </header>
 </template>
 
 <script>
-import Select from "./Select.vue";
 export default {
   name: "Header",
   components: {
-    Select,
+
   },
 };
 </script>

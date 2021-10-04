@@ -1,11 +1,9 @@
-<template>
- <select v-model="selected"  @change="$emit('search', selected)">
+C<template>
+ <select v-model="selected"  @change="$emit('select', selected)">
   <option disabled value="">Filtra per genere</option>
-  <option>A</option>
-  <option>B</option>
-  <option>C</option>
+  <option v-for ="(elm, index) in genrArr" :key="index" value="genre"> {{elm}}</option>
+ 
 </select>
-  
 </template>
 
 <script>
@@ -14,6 +12,7 @@ export default {
     data() {
 		return {
 			selected: "",
+      genrArr:['Rock','Pop','Jazz', 'prova'],
 		}
 	},
 
