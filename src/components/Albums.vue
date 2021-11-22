@@ -30,9 +30,10 @@ export default {
         this.allAlbums = res.data.response;
       });
   },
-  computed: {
+  computed: { 
     filteredList() {
-      return this.allAlbums.filter((value) => {
+      return this.allAlbums.filter(
+        (value) => {
         return value.genre.toLowerCase().includes(this.infoGenre.toLowerCase());
       });
     },
