@@ -27,6 +27,7 @@ export default {
 <style lang="scss">
 header {
   color: white;
+  padding: 1.25rem;
 }
 h1 {
   color: rgb(255, 245, 245);
